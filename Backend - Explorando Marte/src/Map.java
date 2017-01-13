@@ -1,9 +1,9 @@
 
 public class Map {
-	int[][] mapSize;
+	static int[][] mapSize;
 	
 	public Map (int X, int Y){
-		this.mapSize = new int[X][Y];
+		Map.mapSize = new int[X+1][Y+1]; // +1 porque a coordena do ponto superior direito sera um a mais que a posicao maxima do array
 	}
 	
 }
