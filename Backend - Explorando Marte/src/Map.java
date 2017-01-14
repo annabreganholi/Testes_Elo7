@@ -1,3 +1,5 @@
+import java.util.List;
+
 
 public class Map {
 	static int[][] mapSize;
@@ -11,5 +13,9 @@ public class Map {
 	public int getMapX(){
 		return maxX;
 	}
-	
+	public static Map createMap(List<String> input){
+		return new Map(Character.getNumericValue(input.get(0).charAt(0)), 
+				Character.getNumericValue(input.get(0).charAt(2)));
+		  
+	}
 }

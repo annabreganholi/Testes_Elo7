@@ -43,4 +43,41 @@ public class Sonda {
 		}
 	}
 	
+	public static void executingCommands(){
+		Sonda sonda;
+		String[] sondaInitialPosition;
+		String commands;
+		
+		for (int i=1; i<Explorando_Marte.input.size();i++){
+	    	//Criando Sonda e colocando posicao inicial
+	    	sondaInitialPosition = Explorando_Marte.input.get(i).split(" ");
+	    	
+	    	//Pegando primeiro e segundo valor do array de String, 
+	    	//passando os dois primeiros para coordenadas, e o terceiro para char (Direcao)
+	    	sonda = new Sonda(Integer.parseInt(sondaInitialPosition[0]), 
+	    			Integer.parseInt(sondaInitialPosition[1]), 
+	    			sondaInitialPosition[2].charAt(0));
+	    	//Indo para os comandos da sonda
+	    	i++;
+	    	
+	    	//Realizando operacoes de caminho
+	    	commands = Explorando_Marte.input.get(i);
+	    	
+	    	for (int j = 0; j < Explorando_Marte.input.get(i).length() ; j++){
+	    		if (commands.charAt(j) == 'L' || commands.charAt(j) == 'R'){
+	    			sonda.changeDirection(commands.charAt(j));
+	    		}else if (commands.charAt(j) == 'M'){
+	    			sonda.move();
+	    		}
+	    		
+	    	}
+	    	
+	    	//Salvando as posicoes finais
+	    	Explorando_Marte.output.add((Explorando_Marte.map.getMapX() - sonda.actualPosition[0])+ " " + 
+	    								sonda.actualPosition[1] + " " + 
+	    								sonda.direction);
+
+	    }
+	}
+	
 }
