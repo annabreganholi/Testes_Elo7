@@ -36,6 +36,7 @@ public class Explorando_Marte {
 	    	sonda = new Sonda(Integer.parseInt(sondaInitialPosition[0]), 
 	    			Integer.parseInt(sondaInitialPosition[1]), 
 	    			sondaInitialPosition[2].charAt(0));
+	    	//Indo para os comandos da sonda
 	    	i++;
 	    	
 	    	//Realizando operacoes de caminho
