@@ -16,15 +16,15 @@ public class Explorando_Marte {
 		List<String> output = new ArrayList<>();
 		String commands;
 		
-		FileReader freader=new FileReader("input.txt");
-	    BufferedReader inputFile=new BufferedReader(freader);
-		String line=null;
-	    
+		FileReader freader = new FileReader("input.txt");
+	    BufferedReader inputFile = new BufferedReader(freader);
+		String line = null;
+		
+	    //Criando ArrayList com as entradas
 	    while ((line = inputFile.readLine())!= null) 
 	    	input.add(line);
 	    
 	    //Criando mapa
-	    System.out.println(input.get(0).charAt(0));
 	    map = new Map(Character.getNumericValue(input.get(0).charAt(0)), 
 	    				Character.getNumericValue(input.get(0).charAt(2)));
 	    
@@ -37,7 +37,6 @@ public class Explorando_Marte {
 	    	sonda = new Sonda(Integer.parseInt(sondaInitialPosition[0]), 
 	    			Integer.parseInt(sondaInitialPosition[1]), 
 	    			sondaInitialPosition[2].charAt(0));
-	    	System.out.println(sonda.initialPosition[0] + " "+ sonda.initialPosition [1] + " "+ sonda.direction);
 	    	i++;
 	    	
 	    	//Realizando operacoes de caminho

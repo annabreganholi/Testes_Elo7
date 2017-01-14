@@ -14,19 +14,15 @@ public class Sonda {
 	
 	public void changeDirection (char newDirection){
 		if (this.direction == 'N'){
-			System.out.println('N');
 			if (newDirection == 'L') this.direction = 'W';
 			else if (newDirection == 'R') this.direction = 'E';
 		}else if (this.direction == 'S'){
-			System.out.println('S');
 			if (newDirection == 'L')this.direction = 'E';
 			else if (newDirection == 'R') this.direction = 'W';
 		}else if (this.direction == 'E'){
-			System.out.println('E');
 			if (newDirection == 'L') this.direction = 'N';
 			else if (newDirection == 'R') this.direction = 'S';
 		}else if (this.direction == 'W'){
-			System.out.println('W');
 			if (newDirection == 'L') this.direction = 'S';
 			else if (newDirection == 'R') this.direction = 'N';
 		}
