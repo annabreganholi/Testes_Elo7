@@ -19,7 +19,6 @@ public class Explorando_Marte {
 		FileReader freader = new FileReader("input.txt");
 	    BufferedReader inputFile = new BufferedReader(freader);
 		String line = null;
-		
 	    //Criando ArrayList com as entradas
 	    while ((line = inputFile.readLine())!= null) 
 	    	input.add(line);

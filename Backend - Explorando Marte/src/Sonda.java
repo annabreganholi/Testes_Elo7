@@ -29,16 +29,16 @@ public class Sonda {
 	}
 	
 	public void move(){
-		if(direction == 'N'){
+		if(direction == 'E'){
 			this.actualPosition[0] = this.actualPosition[0] - 1; //Y mantem, X diminui 1 (numeracao do X esta invertido em relacao ao plano cartesiano da atividade
 		}
-		else if(direction == 'S'){
+		else if(direction == 'W'){
 			this.actualPosition[0] = this.actualPosition[0] + 1; //Y mantem, X aumenta 1
 		}
-		else if(direction == 'E'){
+		else if(direction == 'N'){
 			this.actualPosition[1] = this.actualPosition[1] + 1; //X mantem, Y aumenta 1
 		}
-		else if(direction == 'W'){
+		else if(direction == 'S'){
 			this.actualPosition[1] = this.actualPosition[1] - 1; //X mantem, Y diminui 1
 		}
 	}
