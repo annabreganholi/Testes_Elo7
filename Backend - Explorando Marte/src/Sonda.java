@@ -6,7 +6,7 @@ public class Sonda {
 	char direction;
 	
 	public Sonda (int X, int Y, char direction){
-		this.initialPosition[0] = Explorando_Marte.map.getMapX() - X;
+		this.initialPosition[0] = Explorando_Marte.map.getMapY() - X;
 		this.initialPosition[1] = Y;
 		this.actualPosition = this.initialPosition;
 		this.direction = direction;
@@ -73,7 +73,7 @@ public class Sonda {
 	    	}
 	    	
 	    	//Salvando as posicoes finais
-	    	Explorando_Marte.output.add((Explorando_Marte.map.getMapX() - sonda.actualPosition[0])+ " " + 
+	    	Explorando_Marte.output.add((Explorando_Marte.map.getMapY() - sonda.actualPosition[0])+ " " + 
 	    								sonda.actualPosition[1] + " " + 
 	    								sonda.direction);
 

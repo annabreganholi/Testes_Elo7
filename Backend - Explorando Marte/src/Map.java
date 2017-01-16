@@ -10,7 +10,7 @@ public class Map {
 		Map.maxY = Y;
 	}
 	
-	public int getMapX(){
+	public int getMapY(){
 		return maxY;
 	}
 	public static Map createMap(List<String> input){
